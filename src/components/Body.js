@@ -6,13 +6,17 @@ import Experience from './Experience';
 
 import '../App.css'
 
-const Main = () => (
+const Body = () => (
+
         <div className="Body"> 
+
             <Switch>
                 <Route exact path="/" component={Home} />
                 <Route path="/experience" component={Experience} />
             </Switch>
+
         </div>
+
 )
 
-export default Main;
+export default Body;

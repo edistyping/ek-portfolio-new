@@ -1,29 +1,86 @@
 .Main {
-  width: 100%;
   height: 100vh;
 
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  
+
+  border-color: aquamarine;
   border-style: solid;
+  border-width: 0 0 2vh 0;
+
+  background-color: #082567;
+
 }
 
 .Header {
   width: 100%;
   height: 10%;
 
-  background-color: red;
+  margin: 0;
+  
+  font-size: 1.5rem;
+  border-color: white;
+  border-style: double;
+
+  display: flex;
+  justify-content: space-evenly;
+  
 }
+.time-style {
+  width: fit-content;
+
+}
+.link-style {
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  cursor: pointer;
+  
+  border-style: solid;
+
+  display: flex;
+  justify-content: space-evenly;
+
+}
+.social-style {
+  height: 100%;
+  width: fit-content;
+
+  border-style: solid;
+
+  display: flex;
+}
+
+
 
 .Body {
   width: 100%;
   height: 80%;
 
-  background-color: orange;
+  padding: 0;
+  margin: 0;
 
+  background-position: 0;
+  background-repeat: no-repeat;
+
+  border-style: dotted;
+  border-color: black;
+  border-width: 1vh;  
 }
+
 
 .Footer {
   width: 100%;
-  height: 10%;
+  height: 5%;
 
-  background-color: yellow;
+  position: fixed;
+  bottom: 0;
+
+  display: flex;
+  justify-content: space-evenly;
+  border-style: solid;
 
 }
+
