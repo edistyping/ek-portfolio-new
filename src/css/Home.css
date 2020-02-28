@@ -1,0 +1,63 @@
+
+.main {
+    display: flex;
+
+    height: 70%;
+    width: 70%;
+
+    border-style: solid;
+    margin: 3% auto;
+}
+
+.left {
+    width: 30%;
+    background-color: purple;
+}
+.left img {
+    
+    height: 80%;
+    width: 80%;
+    margin: 0 10%;
+    border-style: solid;
+    border-color: silver;
+    border-radius: 20px;
+}
+.left p {
+    text-align: center;
+    color: white;
+}
+
+.right {
+    height: 100%;
+    width: 70%;    
+
+    display: flex;
+    flex-direction: column;
+    background-color: pink;
+}
+
+.right-header-component {
+    display: flex;
+    justify-content: space-evenly;
+    border-style: solid;
+    width: 100%;
+    height: fit-content;
+    background-color: green;
+}
+
+.right-header-component p {
+    border-style: solid;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 5vh;
+    width: 100%;
+}
+.notSelected {
+    opacity: 0.6;
+}
+
+.right-body-component {
+    
+    height: 100%;
+    background-color: royalblue;
+}
