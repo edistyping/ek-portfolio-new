@@ -14,7 +14,7 @@
   border-width: 0 0 2vh 0;
 
 
-
+  color: lightseagreen;
   background-color: #202020;
 
 }
@@ -59,7 +59,7 @@
 .social-style img{
   width: 5vh;
   height: 5vh;
-  padding: 0 5%;
+  padding: 0 10%;
 
 }
 
@@ -92,4 +92,5 @@
   border-color: violet;
 
 }
+
 
