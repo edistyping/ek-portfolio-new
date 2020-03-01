@@ -32,7 +32,7 @@ const RightSide = () => {
     const RightHeader = [introduction, interets];
 
     return (
-        <div style={{height: "100%"}}>
+        <div style={{height: "100%", display: "flex", "flex-direction": "column",}}>
             <div className="right-header-component">
                 <p onClick={() => setIndex(0)} className={index === 0 ? '' : 'notSelected'} > haa </p>  
                 <p onClick={() => setIndex(1)} className={index === 1 ? '' : 'notSelected'}> hee </p>  
@@ -45,7 +45,13 @@ const RightSide = () => {
                             i 
                 )}
                 </p>
+
+                <div className="right-skills"> 
+                    Skills here:
+                </div>
             </div>
+
+
         </div>
     )
 }
