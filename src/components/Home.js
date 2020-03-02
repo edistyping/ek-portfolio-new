@@ -14,14 +14,15 @@ const Intro = () => {
 
     return (
         <div>
-                <p>My Name is Edward and I'm a graduate from UC Merced in Computer Science and Engineering</p>
-                <p>My Goal is to earn a full-time position as a web designer and developer using modern tools such as ReactJS.</p>
-                <p>I currently live in Los Angeles working as a Business System Anaylst and continue to search and develop new skills and interests.</p>
+                <p className="right-intro-p">I'm Edward and graduated from UC Merced in Computer Science and Engineering.</p>
+                <p className="right-intro-p">My Goal is to earn a full-time position as a web designer and developer using modern tools such as ReactJS.</p>
+                <p className="right-intro-p">I currently live in Los Angeles working as a Business System Anaylst and continue to search and develop new skills and interests.</p>
               
                 <div className="right-skills"> 
-                    Skills here:
+                    <p style={{textAlign: "center",fontSize: "2.2em", padding: 0, margin: "3% 0 0 0%"}}>Skills</p>
+                    <p style={{marginLeft: "3%"}}>Below are skills I've accumulated from university courses as well as online and from my professional positions.</p>
                     {Skills.map((i) =>
-                        <p>{i}</p>            
+                        <p style={{"text-align": "center"}}>{i}</p>            
                     )}
                 </div>
         </div>
@@ -29,16 +30,19 @@ const Intro = () => {
 }
 
 const Interest = () => {
-    var QandA = ["Cats or Dogs?",
-            "Dogs but dog-like cat is also acceptable",
-            "What is your favorite albums or playlist?",
-            "Jazz or random mix"];
+    var QandA = { 
+            Questions: [
+                "Cats or Dogs?",
+                "What is your favorite albums or playlist?"],
+            Answers: [   
+                "Dogs but dog-like cat is also acceptable",
+                "Jazz or random mix",
+            ],
+    };
 
     return (
         <div>
-            {QandA.map((i) =>
-                <p>{i}</p>            
-            )}
+            <p> INterestse heree </p>
         </div>
 
     )
@@ -50,8 +54,8 @@ const RightSide = () => {
     return (
         <div style={{height: "100%", display: "flex", "flex-direction": "column",}}>
             <div className="right-header-component">
-                <p onClick={() => setIndex(0)} className={index === 0 ? '' : 'notSelected'} > Introduction </p>  
-                <p onClick={() => setIndex(1)} className={index === 1 ? '' : 'notSelected'}> Q and A </p>  
+                <p onClick={() => setIndex(0)} className={index === 0 ? 'selected' : 'notSelected'} > Introduction </p>  
+                <p onClick={() => setIndex(1)} className={index === 1 ? 'selected' : 'notSelected'}> Q and A </p>  
             </div>
 
             
@@ -70,7 +74,7 @@ const RightSide = () => {
 
 
 const Home = () => (    
-    <div style={{borderStyle:"solid", borderColor: "silver", height: "100%"}}>
+    <div style={{borderColor: "silver", height: "100%"}}>
         <div className="main">
             <div className="left">
                 <p>Hello World from Aquarium!</p>

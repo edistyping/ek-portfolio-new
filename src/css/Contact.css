@@ -1,0 +1,38 @@
+.main-contact {
+    width: 70%;
+    height: 70%;
+    margin: 5% auto;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.contact-left {
+    width: 40%;
+
+    font-size: 3em;
+    color: white;
+    text-align: center;
+    margin: auto;
+}
+
+.contact-right {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    color: white;
+}
+
+.contact-right p{
+    font-size: 2em;
+    margin: 5% 0 0 5%;
+    padding: 0;
+}
+
+.contact-right input{
+    font-size: 1.5em;
+    margin: 0 0 0 5%;
+    padding: 0;
+}
