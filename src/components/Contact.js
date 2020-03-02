@@ -14,24 +14,23 @@ const Contact = () => {
                     <p style={{fontSize: "0.5em"}}>Thank you!</p>
                 </div>
     
-
                 <form className="contact-right">
                     <label>
-                    <p>Your Name: </p>
+                    <p>Your Name</p>
                     <input type="text" style={{width:"80%"}}/>
                     </label>
 
                     <label>
-                    <p>Your Email: </p>
+                    <p>Your Email</p>
                     <input type="text" style={{width:"80%"}}/>
                     </label>
 
                     <label>
-                    <p>Message: </p>
-                    <input type="text" style={{width: "80%", height: "70%", }}/>
+                    <p>Message</p>
+                    <input type="text" style={{width: "80%", height: "80%", }}/>
                     </label>
                     
-                    <input type="submit" value="Submit" style={{width: "40%", height: "8%", margin: "auto", backgroundColor: "lightskyblue"}}/>
+                    <input type="submit" value="Submit" style={{textAlign: "center", width: "40%", height: "8%", margin: "auto", backgroundColor: "lightskyblue"}}/>
                 </form>
 
 

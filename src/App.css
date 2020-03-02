@@ -18,17 +18,14 @@
 .Header {
   height: 10%;
   width: 100%;
-
-  
-
   display: flex;
   justify-content: space-evenly;
-
   position: relative;
+
+  color: silver;
 }
 .time-style {
   font-size: 3vh;
-  color: white; 
   font-weight: bold;
   
 }
@@ -43,7 +40,7 @@
   font-weight: bold;;
   font-size: 3vh;
   margin: auto 5%;
-  color: white;
+  color: silver;
 }
 
 .social-style {

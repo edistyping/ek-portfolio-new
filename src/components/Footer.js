@@ -9,8 +9,8 @@ const Footer = () => {
     
     return ( 
             <div className="Footer">
-                <img style={{width: "5vh", height: "100%",  }} src='../images/logo_as.png' alt="A's"/>
                 <img style={{width: "5vh", height: "100%", }} src='../images/logo_raiders.png' alt="Github Icon"/>
+                <img style={{width: "5vh", height: "100%",  }} src='../images/logo_as.png' alt="A's"/>
                 <img style={{width: "5vh", height: "100%", }} src='../images/logo_warriors.png' alt="Github Icon"/>
             </div>
 
