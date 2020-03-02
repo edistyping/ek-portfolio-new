@@ -8,8 +8,9 @@ import Contact from './Contact';
 
 import '../App.css'
 
-const Body = () => (
+const Body = () => {
 
+    return (
         <div className="Body"> 
 
             <Switch>
@@ -20,7 +21,6 @@ const Body = () => (
             </Switch>
 
         </div>
-
-)
-
+    )
+}
 export default Body;

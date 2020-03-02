@@ -1,0 +1,35 @@
+.main-experience {
+    display: flex;
+    flex-direction: row;
+
+    width: 70%;
+    border-style: solid;
+    height: 100%;
+    margin: auto;
+    color: white;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.experience-left{
+    width: 50%;  
+}
+
+.experience-right {
+    width: 50%;
+    background-color: lightyellow;
+}
+
+.experience-right p {
+    background-color: green;
+    border-bottom-style: solid;
+    border-color: red;
+
+    height: 20%;
+
+}
+

@@ -32,29 +32,38 @@ const Intro = () => {
 const Interest = () => {
     var QandA = { 
             Questions: [
-                "Cats or Dogs?",
-                "What is your favorite albums or playlist?",
-                "What are your top 3 music?"
+                "Q. Which one are you more appeal to, Cats or Doggos?",
+                "Q. What is your favorite albums or playlist?",
+                "Q. What are your top 3 music?",
+                "Q. If you can start a sports team, what would you choose as a theme color?",
+                "Q. Do you have any celebrities you admire?",
             ],
             Answers: [   
                 "Dogs but dog-like cat is also acceptable",
                 "Jazz or random mix",
+                "Great question",
+                "Red, White, Yellow",
+                "Norm MacDonald, Bill Burr, and Dave Chappelle"
             ],
     };
 
     return (
-        <div style={{padding: "3% 0 0 5%"}}> 
-            hm: {QandA.Questions[1]}           
-            {QandA.Questions.map((i) => 
-               <p>Questions: {i} </p>
-            )}
+        <div className="right-interests"> 
+            <p>{QandA.Questions[0]}</p>
+            <p>{QandA.Answers[0]}</p>
+
+            <p>{QandA.Questions[1]}</p>
+            <p>{QandA.Answers[1]}</p>
             
-            {QandA.Answers.map((i) => 
-               <p> {i} </p>
-            )}
+            <p>{QandA.Questions[2]}</p>
+            <p>{QandA.Answers[2]}</p>
 
+            <p>{QandA.Questions[3]}</p>
+            <p>{QandA.Answers[3]}</p>
+
+            <p>{QandA.Questions[4]}</p>
+            <p>{QandA.Answers[4]}</p>
         </div>
-
     )
 }
 
@@ -65,7 +74,7 @@ const RightSide = () => {
         <div style={{height: "100%", display: "flex", "flex-direction": "column",}}>
             <div className="right-header-component">
                 <p onClick={() => setIndex(0)} className={index === 0 ? 'selected' : 'notSelected'} > Introduction </p>  
-                <p onClick={() => setIndex(1)} className={index === 1 ? 'selected' : 'notSelected'}> Q and A </p>  
+                <p onClick={() => setIndex(1)} className={index === 1 ? 'selected' : 'notSelected'}> Hobbies & Interests </p>  
             </div>
 
             

@@ -31,18 +31,21 @@ function SocialNetworks(){
           </div>
   )
 }
-const Header = () => (    
+const Header = () => {
+
+    const [index, setIndex] = useState(0);
+
+    return (
     <div className="Header">
         <TimeDisplay/>
-        
         <div className="link-container">
-            <Link className="link-style" to="/">Home</Link>
-            <Link className="link-style" to="/experience">Experience</Link>
-            <Link className="link-style" to="/project">Projects</Link>
-            <Link className="link-style" to="/contact">Contact</Link>
+            <Link to="/" onClick={() => setIndex(0)} className={index === 0 ? 'link-style' : 'link-style-inactive'}>Home</Link>
+            <Link to="/experience" onClick={() => setIndex(1)} className={index === 1 ? 'link-style' : 'link-style-inactive'} >Experience</Link>
+            <Link to="/project" onClick={() => setIndex(2)} className={index === 2 ? 'link-style' : 'link-style-inactive'}>Projects</Link>
+            <Link to="/contact" onClick={() => setIndex(3)} className={index === 3 ? 'link-style' : 'link-style-inactive'}>Contact</Link>
         </div>
         <SocialNetworks/>
     </div>
-)
-
+  )
+}
 export default Header;

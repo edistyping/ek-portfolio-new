@@ -22,7 +22,7 @@
   justify-content: space-evenly;
   position: relative;
 
-  color: silver;
+  color: white;
 }
 .time-style {
   font-size: 3vh;
@@ -35,12 +35,24 @@
   justify-content: space-evenly;  
 }
 
+.link-style-inactive {
+  cursor: pointer;
+  font-weight: bold;;
+  font-size: 3vh;
+  margin: auto 5%;
+  color: white;
+  opacity: 0.6;
+  text-decoration: none;
+}
+
 .link-style {
   cursor: pointer;
   font-weight: bold;;
   font-size: 3vh;
   margin: auto 5%;
-  color: silver;
+  color: white;
+
+  text-decoration-color: lightskyblue;
 }
 
 .social-style {

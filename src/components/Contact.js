@@ -30,7 +30,7 @@ const Contact = () => {
                     <input type="text" style={{width: "80%", height: "80%", }}/>
                     </label>
                     
-                    <input type="submit" value="Submit" style={{textAlign: "center", width: "40%", height: "8%", margin: "auto", backgroundColor: "lightskyblue"}}/>
+                    <input type="submit" value="Send" style={{textAlign: "center", width: "40%", height: "8%", margin: "auto", backgroundColor: "lightskyblue"}}/>
                 </form>
 
 
