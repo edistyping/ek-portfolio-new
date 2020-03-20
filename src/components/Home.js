@@ -34,7 +34,7 @@ const Interest = () => {
             Questions: [
                 "Q. Which one are you more appeal to, Cats or Doggos?",
                 "Q. What is your favorite albums or playlist?",
-                "Q. What are your top 3 music?",
+                "Q. What are TV shows or movies you enjoyed recently?",
                 "Q. If you can start a sports team, what would you choose as a theme color?",
                 "Q. Do you have any celebrities you admire?",
             ],
@@ -50,19 +50,19 @@ const Interest = () => {
     return (
         <div className="right-interests"> 
             <p>{QandA.Questions[0]}</p>
-            <p>{QandA.Answers[0]}</p>
+            <p style={{paddingLeft: "5%"}}>{QandA.Answers[0]}</p>
 
             <p>{QandA.Questions[1]}</p>
-            <p>{QandA.Answers[1]}</p>
+            <p style={{paddingLeft: "5%"}}>{QandA.Answers[1]}</p>
             
             <p>{QandA.Questions[2]}</p>
-            <p>{QandA.Answers[2]}</p>
+            <p style={{paddingLeft: "5%"}}>{QandA.Answers[2]}</p>
 
             <p>{QandA.Questions[3]}</p>
-            <p>{QandA.Answers[3]}</p>
+            <p style={{paddingLeft: "5%"}}>{QandA.Answers[3]}</p>
 
             <p>{QandA.Questions[4]}</p>
-            <p>{QandA.Answers[4]}</p>
+            <p style={{paddingLeft: "5%"}}>{QandA.Answers[4]}</p>
         </div>
     )
 }

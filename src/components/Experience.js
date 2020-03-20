@@ -62,27 +62,32 @@ const Experience = () => {
     const jobList = [job0, job1, job2];
 
     return (
-        <div style={{height: "100%", borderStyle: "solid"}}>
+        <div style={{height: "100%", borderStyle: "solid", borderColor: "yellow"}}>
 
-            <div className="main-experience">
-                    <div className="experience-left">
+                        
                         {jobList.map((i) =>
-                            <div style={{borderBottomStyle: "solid", height: "20%", }}>
-                                <p>{i.employer} | {i.title}</p>
-                                <p>{i.start_date} - {i.end_date}</p>
-                                <p>{i.description}</p>
+                            <div className="main-experience">
+                                <div className="experience-left"> 
+                                    <div>
+                                        <img className="jobicon" src={"./images/job_icon.png"} alt="Logo" />
+                                    </div>
+                                    <div className="experience-left-bottom">
 
-                                https://www.youtube.com/watch?v=0zLf9urBYio refer to
+                                    </div>
+                                </div>
+
+                                <div className="experience-right">
+                                    <p style={{ fontWeight: "bold", fontSize: "2em", padding: "0", margin: "0"}}>{i.employer}</p>
+                                    <p style={{ fontSize: "1.5em", padding: "0", margin: "0"}}>{i.title} | {i.start_date} - {i.end_date}</p>
+                                    
+                                    <div style={{ backgroundColor: "DarkSlateGrey", }}>
+                                      <p>{i.description}</p>
+                                    </div>
+                                </div>
                             </div>
-                        )}
-                    </div>
 
-                    <div className="experience-right">
-                        {jobList.map((i) =>
-                            <p>{i.skills}</p>                                
                         )}
-                    </div>
-            </div>
+                    
 
 
         </div>
