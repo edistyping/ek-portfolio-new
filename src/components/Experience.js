@@ -62,9 +62,7 @@ const Experience = () => {
     const jobList = [job0, job1, job2];
 
     return (
-        <div style={{height: "100%", borderStyle: "solid", borderColor: "yellow"}}>
-
-                        
+        <div style={{height: "auto", backgroundColor: "#202020"}}>
                         {jobList.map((i) =>
                             <div className="main-experience">
                                 <div className="experience-left"> 
@@ -74,15 +72,23 @@ const Experience = () => {
                                     <div className="experience-left-bottom">
 
                                     </div>
+    
+                                    <hr className="test"/>
+
                                 </div>
 
                                 <div className="experience-right">
                                     <p style={{ fontWeight: "bold", fontSize: "2em", padding: "0", margin: "0"}}>{i.employer}</p>
                                     <p style={{ fontSize: "1.5em", padding: "0", margin: "0"}}>{i.title} | {i.start_date} - {i.end_date}</p>
                                     
-                                    <div style={{ backgroundColor: "DarkSlateGrey", }}>
+                                    <div style={{ backgroundColor: "DarkSlateGrey", borderRadius: "15px", padding: "0.5vh 1vh", margin: "2vh 0" }}>
                                       <p>{i.description}</p>
                                     </div>
+
+                                    <div style={{ backgroundColor: "DarkSlateGrey", borderRadius: "15px", padding: "0.5vh 1vh", margin: "2vh 0 0 0"}}>
+                                      <p>Skills Used: {i.skills} </p>
+                                    </div>
+
                                 </div>
                             </div>
 
