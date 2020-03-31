@@ -41,7 +41,7 @@ const Header = () => {
         <div className="link-container">
             <Link to="/" onClick={() => setIndex(0)} className={index === 0 ? 'link-style' : 'link-style-inactive'}>Home</Link>
             <Link to="/experience" onClick={() => setIndex(1)} className={index === 1 ? 'link-style' : 'link-style-inactive'} >Experience</Link>
-            <Link to="/project" onClick={() => setIndex(2)} className={index === 2 ? 'link-style' : 'link-style-inactive'}>Projects</Link>
+            <Link to="/projects" onClick={() => setIndex(2)} className={index === 2 ? 'link-style' : 'link-style-inactive'}>Projects</Link>
             <Link to="/contact" onClick={() => setIndex(3)} className={index === 3 ? 'link-style' : 'link-style-inactive'}>Contact</Link>
         </div>
         <SocialNetworks/>

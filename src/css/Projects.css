@@ -1,0 +1,24 @@
+.projects-container {
+    display: grid;
+    color: white;
+    
+
+    grid-template-columns: 40% 40%;
+
+    grid-gap: 20px;
+
+    border-style: solid;
+}
+
+.projects-element {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 2em;
+    
+
+    color: blue;
+    background-color: teal;
+    border-style: solid;
+}

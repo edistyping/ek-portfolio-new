@@ -11,15 +11,15 @@ const Experience = () => {
         start_date: "Sep 2018",
         end_date: "Sep 2019",
         description: [
-            "Oakwood is a company that provides service in corporate housing across global regions including Europe, Asia, and Americas",
             "As a Business System Analyst, my responsibilites are to work with various departments or personnel for requirement gatherings, design, and development of reports as well as testing and documentation. ",
         ],
         skills: [
             "SQL",
             "ETL",
-            "BusinessIntellignece/BusinessObjects",
+            "BusinessObjects",
             "VBA/Macro",
-            "Data Analysis / Dashboard Creation / FTP Automation",            
+            "Data Analysis",
+            "Dashboard Creation",            
         ],
     };
     var job1 = {
@@ -30,10 +30,10 @@ const Experience = () => {
         end_date: "July 2018",
         description: [
             "CGI is a....",
-            "hi1sdafjlkdsafjlskdafjlskdafjldsaifjosajfpdsaijfpsdafjpsdajfpsdjfpsdfjpdsfjpsdjfpsdjf dsfjpsdjfs pdsjf dsfjpsdjfs pdsjfdsfjpsdjfs pdsjfdsfjpsdjfs pdsjfdsfjpsdjfs pdsjfdsfjpsdjfs pdsjf789",
+            "pdsjf789",
         ],
         skills: [
-            "SQL/SQL Server",
+            "SQL Server",
             "VBA",
             "Programming",       
             "Shell Scripting",     
@@ -46,13 +46,11 @@ const Experience = () => {
         start_date: "Oct 2017",
         end_date: "Jan 2018",
         description: [
-            "GS Love was a retail company with over 30-plus stores across Southern California focusing on clothings, accessories, and other merchandise for women",
-            "My primary responsibilities are preparing daily and weekly reports by extracting data directly from SQL Developer with Microsoft Office.",
-            "blah blah blah"
+            "As a Store Analyst for the retail headquarter, my responsibilities are preparing daily and weekly reports by extracting data directly from SQL Developer with Microsoft Office."
         ],
         skills: [
             "Python", 
-            "SQL/SQL Developer",
+            "SQL Developer",
             "Microsoft Office",
             "VBA/Macro",
             "Forecasting/Analysis",      
@@ -62,7 +60,7 @@ const Experience = () => {
     const jobList = [job0, job1, job2];
 
     return (
-        <div style={{height: "auto", backgroundColor: "#202020"}}>
+        <div style={{height: "auto", backgroundColor: "#202020", }}>
                         {jobList.map((i) =>
                             <div className="main-experience">
                                 <div className="experience-left"> 
@@ -78,15 +76,25 @@ const Experience = () => {
                                 </div>
 
                                 <div className="experience-right">
-                                    <p style={{ fontWeight: "bold", fontSize: "2em", padding: "0", margin: "0"}}>{i.employer}</p>
+                                    <h1 style={{padding: "0", margin:"0"}}>{i.employer}</h1>
                                     <p style={{ fontSize: "1.5em", padding: "0", margin: "0"}}>{i.title} | {i.start_date} - {i.end_date}</p>
                                     
-                                    <div style={{ backgroundColor: "DarkSlateGrey", borderRadius: "15px", padding: "0.5vh 1vh", margin: "2vh 0" }}>
-                                      <p>{i.description}</p>
-                                    </div>
 
-                                    <div style={{ backgroundColor: "DarkSlateGrey", borderRadius: "15px", padding: "0.5vh 1vh", margin: "2vh 0 0 0"}}>
-                                      <p>Skills Used: {i.skills} </p>
+
+                                    <div style={{display:"flex", flexDirection: "column", padding: "0.1vh 0 0 0", margin: "1vh 0 0 0", }}>
+
+                                        <div className="experience-right-bottom">
+                                            <p>{i.description}</p>
+                                        </div>
+
+                                        <h2 style={{margin: "1vh 0" }}>Skills</h2>
+                                        <div style={{display:"flex", justifyContent: "space-evenly", }}>
+                                            {i.skills.map((j) => 
+                                                <div className="experience-right-bottom" >
+                                                    <p>{j}</p>
+                                                </div> 
+                                            )}
+                                        </div>  
                                     </div>
 
                                 </div>
