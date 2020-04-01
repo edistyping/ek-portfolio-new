@@ -4,7 +4,6 @@ import '../css/Projects.css'
 
 const Projects = () => (    
     <div style={{width:"100%", height: "100%",backgroundColor:"yellow", }}>
-        <h1 style={{textAlign: "center"}}>Projects</h1> 
         <h2 style={{textAlign: "center"}}>Below shows different applications I've developed either by myself or my fellows to design and implement an idea brainstormed. </h2>
             
         <div className="projects-container"> 
