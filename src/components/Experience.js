@@ -11,7 +11,8 @@ const Experience = () => {
         start_date: "Sep 2018",
         end_date: "Sep 2019",
         description: [
-            "As a Business System Analyst, my responsibilites are to work with various departments or personnel for requirement gatherings, design, and development of reports as well as testing and documentation. ",
+            "As a Business System Analyst, my responsibilites are to design, development, and automation of BusinessObjects reports. Additional tasks included testing, documentation, and maintaineous.",
+            "Using SQLServers and ETL tools, assist with users with any troubling issues.",
         ],
         skills: [
             "SQL",
@@ -29,8 +30,8 @@ const Experience = () => {
         start_date: "Jan 2018",
         end_date: "July 2018",
         description: [
-            "CGI is a....",
-            "pdsjf789",
+            "CGI is a ....",
+            "",
         ],
         skills: [
             "SQL Server",
@@ -46,7 +47,8 @@ const Experience = () => {
         start_date: "Oct 2017",
         end_date: "Jan 2018",
         description: [
-            "As a Store Analyst for the retail headquarter, my responsibilities are preparing daily and weekly reports by extracting data directly from SQL Developer with Microsoft Office."
+            "As a Store Analyst for the retail headquarter, my responsibilities are preparing daily and weekly reports by extracting data directly from SQL Developer with Microsoft Office.",
+            "Primary responsibility includes analyzing sales and profits, and transfer inventories across 30 stores in goals to increase the numbers.",
         ],
         skills: [
             "Python", 
@@ -84,7 +86,10 @@ const Experience = () => {
                                     <div style={{display:"flex", flexDirection: "column", padding: "0.1vh 0 0 0", margin: "1vh 0 0 0", }}>
 
                                         <div className="experience-right-bottom">
-                                            <p>{i.description}</p>
+                                            {i.description.map((j) =>
+                                            <p>{j}</p>
+                                            
+                                            )}
                                         </div>
 
                                         <h2 style={{margin: "1vh 0" }}>Skills</h2>

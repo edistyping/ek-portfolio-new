@@ -1,24 +1,25 @@
 .projects-container {
-    display: grid;
-    color: white;
+    border-style: solid;
+    border-color: aqua;
     
+    width: fit-content;
+    
+    margin: auto;
 
-    grid-template-columns: 40% 40%;
-
+    display: grid;
+    grid-template-columns: auto auto;
     grid-gap: 20px;
 
-    border-style: solid;
 }
 
 .projects-element {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 300px;
+    width: 700px;
 
-    font-size: 2em;
-    
+    text-align: center;
 
-    color: blue;
-    background-color: teal;
+    font-size: 2em;    
+    color: black;
+    background-color: white;
     border-style: solid;
 }
