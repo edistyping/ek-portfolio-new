@@ -23,18 +23,19 @@
     flex-direction: column;
 
     color: white;
+    background-color: green;
+
 }
 
 .contact-right p{
     font-size: 2em;
-    margin: 5% 0 0 5%;
-    padding: 0;
+    margin: 0 0 0 5%;
+
 }
 
 .contact-right input{
     font-size: 1.5em;
     margin: 0 0 0 5%;
-    padding: 0;
 
-    text-align: initial;
+    text-align: justify;
 }

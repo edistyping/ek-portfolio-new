@@ -2,10 +2,25 @@ import React from 'react';
 
 import '../css/Projects.css'
 
+
+const Popup = ({children}) => {
+
+    // https://alligator.io/react/modal-component/
+
+    return (
+        <div>
+                {children}
+        </div>      
+    );
+};
+
 const Projects = () => (    
     <div style={{width:"100%", height: "100%",backgroundColor:"yellow", }}>
         <h2 style={{textAlign: "center"}}>Below shows different applications I've developed either by myself or my fellows to design and implement an idea brainstormed. </h2>
-            
+        <h3 style={{textAlign: "center"}}> Click to see more Details! </h3>   
+    
+
+    <Popup>
         <div className="projects-container"> 
             <div className="projects-element">
                 <h2>Plan One</h2>
@@ -29,6 +44,7 @@ const Projects = () => (
                 <p>Window App | Simple 2-D Game | OpenGL++</p>
             </div>
         </div> 
+    </Popup>
 
     </div>
 )

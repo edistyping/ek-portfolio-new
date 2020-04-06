@@ -17,7 +17,7 @@ const Contact = () => {
                 <form className="contact-right">
                     <label>
                     <p>Your Name</p>
-                    <input type="text" style={{width:"80%"}}/>
+                    <input type="text" style={{width:"80%", height: "5vh",}}/>
                     </label>
 
                     <label>
@@ -27,7 +27,7 @@ const Contact = () => {
 
                     <label>
                     <p>Message</p>
-                    <input type="text" style={{width: "80%", height: "80%", }}/>
+                    <input type="text" style={{width: "80%", }}/>
                     </label>
                     
                     <input type="submit" value="Send" style={{textAlign: "center", width: "40%", height: "8%", margin: "auto", backgroundColor: "lightskyblue"}}/>
