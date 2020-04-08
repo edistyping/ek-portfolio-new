@@ -4,7 +4,7 @@
     border-width: 15px;
 
     width: fit-content;
-    
+    height: fit-content;
     margin: auto;
 
     display: grid;
@@ -15,16 +15,33 @@
 }
 
 .projects-element {
-    height: 300px;
-    width: 700px;
+    height: 100%;
+    width: 100%;
 
     text-align: center;
 
-    font-size: 2em;    
+    font-size: 1.5em;    
     color: black;
     background-color: white;
     border-style: solid;
 
-
     cursor: pointer;
 }
+
+.project-popup {
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, 0);
+    top: 20%;
+    background-color: aqua;
+}
+
+.diplay-none {
+    display: none;
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, 0);
+    top: 20%;
+    background-color: aqua;
+}
+
