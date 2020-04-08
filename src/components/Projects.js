@@ -3,11 +3,18 @@ import React, { useState } from 'react';
 import '../css/Projects.css'
 
 const Popup = (props) => {
+    
+    // Now import Projects information and select using 'props.show' value
+    // Platforms, language, description, purpose, target, iamges, github/code, 
 
-    // https://alligator.io/react/modal-component/
     return (
         <div>
                 <h3>Hello Everyone --- </h3>
+                <p>Platforms: </p>
+                <p>Language: </p>
+                <p>Purpose/Description: </p>
+                <p>Images (slideshow)</p>
+                    - build a game and put on here (flappybird)
                 <p>It's amazing I'm the reason Everybody fired up this evening I'm exhausted Barely breathing Holding on to what I believe in No matter what You'll never take that from me  My reign is as far as your eyes can see It's amazin', so amazin', so amazin', so amazin', it's amazin' So amazin', so amazin', so amazin', it's amazin' (Let's go)</p>
         </div>      
     );
@@ -50,12 +57,11 @@ const Projects = () => {
                 <div className="projects-element" onClick={() => setShow(1)}>
                     <h2>Flying Pigeon</h2>
                     <p>Spring 2017</p>
+                    <p>(Build one using ReactJS and host it; future)</p>
                     <p>Window App | Simple 2-D Game | OpenGL++</p>
                 </div>
             </div> 
 
-            <h2 style={{textAlign: "center"}}>Below shows different applications I've developed either by myself or my fellows to design and implement an idea brainstormed. </h2>
-            <h3 style={{textAlign: "center"}}> Click to see more Details! </h3>  
         </div>
 
     )
