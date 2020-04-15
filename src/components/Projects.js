@@ -9,7 +9,7 @@ const Popup = (props) => {
 
     return (
         <div>
-                <h3>Hello Everyone --- </h3>
+                <h3>Hello Everyone s--- </h3>
                 <p>Platforms: </p>
                 <p>Language: </p>
                 <p>Purpose/Description: </p>
