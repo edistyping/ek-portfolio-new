@@ -6,7 +6,7 @@
     width: fit-content;
     height: fit-content;
     margin: auto;
-
+ 
     display: grid;
     grid-template-columns: auto auto;
     grid-gap: 20px;
@@ -31,9 +31,13 @@
 .project-popup {
     position: fixed;
     left: 50%;
+    top: 15%;
+
+    width: 40%;
+    
     transform: translate(-50%, 0);
-    top: 20%;
-    background-color: aqua;
+    background-color: greenyellow;
+    border-style: solid;
 }
 
 .diplay-none {
