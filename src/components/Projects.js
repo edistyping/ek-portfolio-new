@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import ImageSlide from './ImageSlide';
+
 import '../css/Projects.css'
 
 const Popup = (props) => {
@@ -46,9 +48,10 @@ const Popup = (props) => {
             "My experience from ",
         ],
         tools: [
-            "Java",
-            "Android",
+            "Window Application",
+            "OpenGL",
             "Project Management",
+            "2-D Game",
         ],
     };
 
@@ -71,32 +74,29 @@ const Popup = (props) => {
     const projList = [proj_planone, proj_inventstory, proj_flying, proj_projectprotect];
     const selected = props.show - 1;
 
-    console.log("Wtf" + proj_planone.projName);
-    console.log("Wtf" + projList[0].projName);
-    // Now import Projects information and select using 'props.show' value
-    // Platforms, language, description, purpose, target, iamges, github/code, 
-
     return (
-        <div >
-                <h3>Hello Everyone {selected} </h3>
+        <div style={{display: "flex", flexDirection:"column", }}>
 
-                <p>Project Name: {projList[selected].projName} </p>
-                <p>Timeline: {projList[selected].period} </p>
-                <p>Platforms: {projList[selected].platform} </p>
-                <p>Language: {projList[selected].tools}</p>
-                <p>Purpose/Description: {projList[selected].purpose} </p>
-                <p>Motive: {projList[selected].motive}</p>
-        
-                <p>(Some images here for sample...)</p>
-                <p>(Github Codes if exists)</p>
-                <p>Any Future plan?</p>
+                <div className="test"><p className="project-header">Project Name </p><p style={{display: "inline", fontSize: "1em"}}>{projList[selected].projName} </p> </div>
+                <div className="test"><p className="project-header">Timeline </p><p style={{display: "inline"}}>{projList[selected].period} </p></div>
+                <div className="test"><p className="project-header">Platforms </p><p style={{display: "inline"}}> {projList[selected].platform} </p></div>
+                <div className="test"><p className="project-header">Language </p><p style={{display: "inline"}}>{projList[selected].tools.map((i) => i + " ") } </p> </div>
+                <div className="test"><p className="project-header">Purpose/Description </p><p style={{display: "inline"}}>{projList[selected].purpose} </p> </div>
+                <div className="test"><p className="project-header">Motive </p><p style={{display: "inline"}}>{projList[selected].motive}</p></div>
+
+                <div className="test">
+                    <p className="project-header">Screenshots </p> 
+                    <ImageSlide/>
+                </div>
+                <div className="test"><p className="project-header">Github </p> </div>
+                <div className="test"><p className="project-header">Future Plan</p> </div>
         </div>      
     );
 };
 
 const Projects = () => {
 
-    const [show, setShow] = useState(0);
+    const [show, setShow] = useState(1);
 
     var popupClass = "diplay-none";
     if (show != 0){
@@ -104,7 +104,7 @@ const Projects = () => {
     }    
 
     return (    
-        <div style={{width:"100%", height: "auto",backgroundColor:"yellow", }}>
+        <div style={{width:"100%", height: "80vh",backgroundColor:"grey", display:"flex", }}>
             
             <div className={popupClass} >
                 {show === 0 ? null : <Popup show={show}/> }

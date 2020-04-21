@@ -1,21 +1,17 @@
 .projects-container {
-    border-style: solid;
-    border-color: aqua;
-    border-width: 15px;
-
-    width: fit-content;
-    height: fit-content;
+    
+    width: 80%;
     margin: auto;
- 
+    
     display: grid;
     grid-template-columns: auto auto;
-    grid-gap: 20px;
+    grid-gap: 5%;
 
     
 }
 
 .projects-element {
-    height: 100%;
+    height: auto;
     width: 100%;
 
     text-align: center;
@@ -34,9 +30,10 @@
     top: 15%;
 
     width: 40%;
+    height: fit-content;
     
     transform: translate(-50%, 0);
-    background-color: greenyellow;
+    background-color: grey;
     border-style: solid;
 }
 
@@ -49,3 +46,20 @@
     background-color: aqua;
 }
 
+.project-header {
+    font-size: 1.5em;
+    display: inline-block;
+
+    padding: 0 1vh 0 0;
+    margin: 0;
+
+}
+
+.test {
+    background-color: white;
+    text-align: left;
+    border-style: solid;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
