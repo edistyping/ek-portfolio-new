@@ -108,9 +108,9 @@ const Home = () => (
             <h1 style={{textAlign: "center"}}>This will be Instagram Section</h1>
 
             <div style={{display: "flex", justifyContent: "space-evenly", }}>                
-                <img src="" style={{width: "100px", height: "100px", }} alt="picture here" />
-                <img src="" style={{width: "100px", height: "100px", }} alt="picture here" />
-                <img src="" style={{width: "100px", height: "100px", }} alt="picture here" />
+                <img src="" style={{width: "100px", height: "100px", }} alt="here1" />
+                <img src="" style={{width: "100px", height: "100px", }} alt="here2" />
+                <img src="" style={{width: "100px", height: "100px", }} alt="here3" />
             </div>
         </div>
     </div>

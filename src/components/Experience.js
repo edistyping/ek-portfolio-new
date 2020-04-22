@@ -34,10 +34,11 @@ const Experience = () => {
             "Secondary responsilbities include unit-testing or troubleshooting any issues in regards to  automations or report developments.",
         ],
         skills: [
-            "SQL Server",
-            "VBA",
+            "SQL Developer",
+            "Microsoft Office",
+            "VBA/Macro",
             "Programming",       
-            "Shell Scripting",     
+            "Shell Scripting/Unit Testing/Documentation",     
         ],
     };
     var job2 = {
@@ -52,7 +53,8 @@ const Experience = () => {
             "I provided daily and weekly analtical reports, and using these reports supplemented with any additional data and sales team to transfer inventories across stores to increase sales and profits.",
         ],
         skills: [
-            "Python", 
+            "Python",
+            "R", 
             "SQL Developer",
             "Microsoft Office",
             "VBA/Macro",
@@ -65,8 +67,7 @@ const Experience = () => {
     return (
         <div style={{width: "100%", height: "auto", backgroundColor: "#202020",  }}>
 
-                <div style={{width: "60%", margin: "0 auto 3% auto", backgroundColor: "lightcoral" }}>
-
+                <div style={{width: "55%", margin: "0 auto 3% auto",  }}>
                         {jobList.map((i) =>
                             <div className="main-experience">
                                 <div className="experience-left"> 
@@ -74,36 +75,40 @@ const Experience = () => {
                                         <img className="jobicon" src={"./images/job_icon.png"} alt="Logo" />
                                     </div>
 
-                                    <div className="experience-left-bottom" />
+                                    <div style={{display: "flex", width: "100%", height: "100%"}}>
+                                        <div style={{"border-right": "2px solid white", height: "auto", width: "100%"}} />
+                                        <div style={{"border-bottom": "2px solid white", height: "auto", width: "100%"}} /> 
+                                    </div>
+
+                                    {/*<div className="experience-left-bottom" /> */}
                                     {/*<hr className="test"/>*/}
 
                                 </div>
 
                                 <div className="experience-right">
-                                    <h1 style={{padding: "0", margin:"0"}}>{i.employer}</h1>
-                                    <p style={{ fontSize: "1.5em", padding: "0", margin: "0"}}>{i.title} | {i.start_date} - {i.end_date}</p>
-                                    
+                                        <h1 style={{padding: "0", margin:"0"}}>{i.employer}</h1>
+                                        <p style={{ fontSize: "1.5em", padding: "0", margin: "0"}}>{i.title} | {i.start_date} - {i.end_date}</p>
+                                        
 
 
-                                    <div style={{display:"flex", flexDirection: "column", padding: "0.1vh 0 0 0", margin: "1vh 0 0 0", }}>
+                                        <div style={{display:"flex", flexDirection: "column", padding: "0.1vh 0 0 0", margin: "1vh 0 0 0", }}>
 
-                                        <div className="experience-right-bottom">
-                                            {i.description.map((j) =>
-                                            <p>{j}</p>
-                                            
-                                            )}
+                                            <div className="experience-right-bottom">
+                                                {i.description.map((j) =>
+                                                <p>{j}</p>
+                                                
+                                                )}
+                                            </div>
+
+                                            <h2 style={{margin: "1vh 0" }}>Skills</h2>
+                                            <div style={{display:"flex", justifyContent: "space-evenly", }}>
+                                                {i.skills.map((j) => 
+                                                    <div className="experience-right-bottom" >
+                                                        <p>{j}</p>
+                                                    </div> 
+                                                )}
+                                            </div>  
                                         </div>
-
-                                        <h2 style={{margin: "1vh 0" }}>Skills</h2>
-                                        <div style={{display:"flex", justifyContent: "space-evenly", }}>
-                                            {i.skills.map((j) => 
-                                                <div className="experience-right-bottom" >
-                                                    <p>{j}</p>
-                                                </div> 
-                                            )}
-                                        </div>  
-                                    </div>
-
                                 </div>
                             </div>
 

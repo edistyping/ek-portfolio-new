@@ -17,8 +17,6 @@
 .experience-left {
     display: flex;
     flex-direction: column;
-    border-bottom: 2px solid;
-    
 }
 
 .experience-left-bottom {
@@ -27,6 +25,7 @@
     margin: 0;
     padding: 0;
     background: linear-gradient(white, white) no-repeat center/2px 100%;
+    background-color: black;
 }
 
 .test {
@@ -37,7 +36,10 @@
 
 .experience-right {
     padding: 1% 2%;
+
+ 
     border-bottom: 2px solid white;
+
 }
 
 .experience-right-bottom {
@@ -47,6 +49,8 @@
 
     padding: 0 2vh;
     margin: 0 1vh 0 0;
+
+
 
     border-radius: 15px;
     background-color: darkslategrey;
