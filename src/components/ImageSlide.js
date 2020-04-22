@@ -24,7 +24,7 @@ const ImageSlide = (props) => {
 
         <div style={{ display: "flex", flexDirection: "column", width: "100%", height: "auto", backgroundColor: "yellow", }} >
             <p style={{margin: "auto"}}> Image: {index+1} / {imgArr.length}</p>
-            <img src={imgArr[index]} style={{width: "70%", height: "40vh", margin: "auto"}} alt="project images" />
+            <img src={imgArr[index]} style={{width: "45%", height: "35vh", margin: "auto"}} alt="project images" />
         
             <div style={{display: "flex", justifyContent: "center", height: "100%", backgroundColor: "blue"}}>
                 <button style={{width: "150px", height: "40px",  }} onClick={() => setIndex(ControlLimit(index,imgArr.length-1, -1))} >  Left </button>

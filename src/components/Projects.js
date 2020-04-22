@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 
 import ImageSlide from './ImageSlide';
-import ImageTest from '../assets/loopy_end.jpg';
-import ImageTest2 from '../assets/loopy_start.jpg';
 import '../css/Projects.css'
 
 const Popup = (props) => {
@@ -23,7 +21,10 @@ const Popup = (props) => {
         ],
         github: "",
         futuregoal: "Planning on re-coding this Mobile App from scratch in Kotlin!",
-        screenshots: [],
+        screenshots: ["/images/planone/1.png",
+                    "/images/planone/2.png",
+                    "/images/planone/3.png",
+                    "/images/planone/4.png"],
     };
 
     var proj_inventstory = {
@@ -42,9 +43,11 @@ const Popup = (props) => {
         ],
         github: "",
         futuregoal: "Planning on re-coding this Mobile App from scratch in Kotlin!",
-        screenshots: [],
+        screenshots: ["/images/invent1.jpg",
+                    "/images/invent2.jpg",
+                    "/images/invent3.jpg",
+                    "/images/invent4.jpg"],
     };
-
     var proj_flying = {
         id: 3,
         projName: "Flying Pigeno (Rename)",
@@ -62,8 +65,8 @@ const Popup = (props) => {
         ],
         github: "https://github.com/goosfraba814/Flying-Ninja",
         futuregoal: "Re-creating this game as Web app instead and accessable via here (portfolio)",
-        screenshots: ["/static/media/loopy_end.f87d5268.jpg",
-                     "/static/media/loopy_start.4022d2be.jpg", 
+        screenshots: ["/images/loopy_end.jpg",
+                     "/images/loopy_start.jpg", 
         ]
     };
 
@@ -96,7 +99,6 @@ const Popup = (props) => {
     return (
         //Honetsly i think we can remvoe project-header stuff and only provide data/info
         <div style={{display: "flex", flexDirection:"column"}}>
-
             <div className="test"><p className="project-header">Project Name </p><p style={{display: "inline", fontSize: "1em"}}>{projList[selected].projName} </p> </div>
             <div className="test"><p className="project-header">Timeline </p><p style={{display: "inline"}}>{projList[selected].period} </p></div>
             <div className="test"><p className="project-header">Platforms </p><p style={{display: "inline"}}> {projList[selected].platform} </p></div>
@@ -106,7 +108,6 @@ const Popup = (props) => {
 
             
             <div className="test">
-                
                 <p className="project-header">Screenshots </p> 
                 {projList[selected].screenshots.length == 0 ? null : <ImageSlide value={projList[selected].screenshots} /> }
                
