@@ -27,11 +27,10 @@
 .project-popup {
     position: fixed;
     left: 50%;
-    top: 15%;
 
     width: 40%;
     height: fit-content;
-    
+
     transform: translate(-50%, 0);
     background-color: grey;
     border-style: solid;

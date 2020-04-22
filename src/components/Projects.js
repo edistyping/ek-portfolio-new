@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 
 import ImageSlide from './ImageSlide';
-
+import ImageTest from '../assets/loopy_end.jpg';
+import ImageTest2 from '../assets/loopy_start.jpg';
 import '../css/Projects.css'
 
 const Popup = (props) => {
@@ -20,6 +21,9 @@ const Popup = (props) => {
             "Android",
             "Project Management",
         ],
+        github: "",
+        futuregoal: "Planning on re-coding this Mobile App from scratch in Kotlin!",
+        screenshots: [],
     };
 
     var proj_inventstory = {
@@ -36,6 +40,9 @@ const Popup = (props) => {
             "Android",
             "Project Management",
         ],
+        github: "",
+        futuregoal: "Planning on re-coding this Mobile App from scratch in Kotlin!",
+        screenshots: [],
     };
 
     var proj_flying = {
@@ -53,6 +60,11 @@ const Popup = (props) => {
             "Project Management",
             "2-D Game",
         ],
+        github: "https://github.com/goosfraba814/Flying-Ninja",
+        futuregoal: "Re-creating this game as Web app instead and accessable via here (portfolio)",
+        screenshots: ["/static/media/loopy_end.f87d5268.jpg",
+                     "/static/media/loopy_start.4022d2be.jpg", 
+        ]
     };
 
     var proj_projectprotect = {
@@ -69,37 +81,51 @@ const Popup = (props) => {
             "Android",
             "Project Management",
         ],
+        github: "",
+        futuregoal: "None",
+        screenshots: [],
     };
 
     const projList = [proj_planone, proj_inventstory, proj_flying, proj_projectprotect];
     const selected = props.show - 1;
 
+    const testt = "/static/media/loopy_end.f87d5268.jpg";
+    const testt2 = "/static/media/loopy_start.4022d2be.jpg";
+
+
     return (
-        <div style={{display: "flex", flexDirection:"column", }}>
+        //Honetsly i think we can remvoe project-header stuff and only provide data/info
+        <div style={{display: "flex", flexDirection:"column"}}>
 
-                <div className="test"><p className="project-header">Project Name </p><p style={{display: "inline", fontSize: "1em"}}>{projList[selected].projName} </p> </div>
-                <div className="test"><p className="project-header">Timeline </p><p style={{display: "inline"}}>{projList[selected].period} </p></div>
-                <div className="test"><p className="project-header">Platforms </p><p style={{display: "inline"}}> {projList[selected].platform} </p></div>
-                <div className="test"><p className="project-header">Language </p><p style={{display: "inline"}}>{projList[selected].tools.map((i) => i + " ") } </p> </div>
-                <div className="test"><p className="project-header">Purpose/Description </p><p style={{display: "inline"}}>{projList[selected].purpose} </p> </div>
-                <div className="test"><p className="project-header">Motive </p><p style={{display: "inline"}}>{projList[selected].motive}</p></div>
+            <div className="test"><p className="project-header">Project Name </p><p style={{display: "inline", fontSize: "1em"}}>{projList[selected].projName} </p> </div>
+            <div className="test"><p className="project-header">Timeline </p><p style={{display: "inline"}}>{projList[selected].period} </p></div>
+            <div className="test"><p className="project-header">Platforms </p><p style={{display: "inline"}}> {projList[selected].platform} </p></div>
+            <div className="test"><p className="project-header">Language </p><p style={{display: "inline"}}>{projList[selected].tools.map((i) => i + " ") } </p> </div>
+            <div className="test"><p className="project-header">Purpose/Description </p><p style={{display: "inline"}}>{projList[selected].purpose} </p> </div>
+            <div className="test"><p className="project-header">Motive </p><p style={{display: "inline"}}>{projList[selected].motive}</p></div>
 
-                <div className="test">
-                    <p className="project-header">Screenshots </p> 
-                    <ImageSlide/>
-                </div>
-                <div className="test"><p className="project-header">Github </p> </div>
-                <div className="test"><p className="project-header">Future Plan</p> </div>
+            
+            <div className="test">
+                
+                <p className="project-header">Screenshots </p> 
+                {projList[selected].screenshots.length == 0 ? null : <ImageSlide value={projList[selected].screenshots} /> }
+               
+            </div>
+            <div className="test"><p className="project-header">Github </p> {projList[selected].github} </div>
+            <div className="test"> 
+                <p className="project-header">Future Plan: </p> 
+                <p style={{margin: 0}}>{projList[selected].futuregoal} </p> 
+            </div>
         </div>      
     );
 };
 
 const Projects = () => {
 
-    const [show, setShow] = useState(1);
+    const [show, setShow] = useState(3);
 
     var popupClass = "diplay-none";
-    if (show != 0){
+    if (show !== 0){
         popupClass = "project-popup";
     }    
 
