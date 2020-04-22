@@ -31,7 +31,6 @@ const Popup = (props) => {
         id: 2,
         projName: "InventStory",
         period: "Spring 2016",
-        platform: "Android",
         purpose: "The purpose/functionality of InventStory is to provide a hand to start-up business",
         motive: [
             "My experience from TJ Maxx and KBBQ came in handy for designing",
@@ -41,7 +40,7 @@ const Popup = (props) => {
             "Android",
             "Project Management",
         ],
-        github: "",
+        github: "https://github.com/goosfraba814/Invent_Story_MAC_S2016-First-Draft-",
         futuregoal: "Planning on re-coding this Mobile App from scratch in Kotlin!",
         screenshots: ["/images/invent1.jpg",
                     "/images/invent2.jpg",
@@ -50,9 +49,8 @@ const Popup = (props) => {
     };
     var proj_flying = {
         id: 3,
-        projName: "Flying Pigeno (Rename)",
+        projName: "Flying Ninja",
         period: "Spring 2017",
-        platform: "Windows Application",
         purpose: "This is a game created",
         motive: [
             "My experience from ",
@@ -65,8 +63,8 @@ const Popup = (props) => {
         ],
         github: "https://github.com/goosfraba814/Flying-Ninja",
         futuregoal: "Re-creating this game as Web app instead and accessable via here (portfolio)",
-        screenshots: ["/images/loopy_end.jpg",
-                     "/images/loopy_start.jpg", 
+        screenshots: ["/images/loopy_start.jpg",
+                     "/images/loopy_end.jpg", 
         ]
     };
 
@@ -74,7 +72,6 @@ const Popup = (props) => {
         id: 4,
         projName: "Project Protect",
         period: "Fall 2015",
-        platform: "Andoird",
         purpose: "An App created to provide medical information and communication between patient and doctors in Merced Community",
         motive: [
             "My experience from TJ Maxx and KBBQ came in handy for designing",
@@ -85,34 +82,31 @@ const Popup = (props) => {
             "Project Management",
         ],
         github: "",
-        futuregoal: "None",
+        futuregoal: "None at this-time",
         screenshots: [],
     };
 
     const projList = [proj_planone, proj_inventstory, proj_flying, proj_projectprotect];
     const selected = props.show - 1;
 
-    const testt = "/static/media/loopy_end.f87d5268.jpg";
-    const testt2 = "/static/media/loopy_start.4022d2be.jpg";
-
-
     return (
         //Honetsly i think we can remvoe project-header stuff and only provide data/info
         <div style={{display: "flex", flexDirection:"column"}}>
-            <div className="test"><p className="project-header">Project Name </p><p style={{display: "inline", fontSize: "1em"}}>{projList[selected].projName} </p> </div>
-            <div className="test"><p className="project-header">Timeline </p><p style={{display: "inline"}}>{projList[selected].period} </p></div>
-            <div className="test"><p className="project-header">Platforms </p><p style={{display: "inline"}}> {projList[selected].platform} </p></div>
-            <div className="test"><p className="project-header">Language </p><p style={{display: "inline"}}>{projList[selected].tools.map((i) => i + " ") } </p> </div>
+            <div className="test"><p style={{display: "inline", fontSize: "1.5em"}}>{projList[selected].projName} </p> </div>
+            <div className="test"><p style={{display: "inline"}}>{projList[selected].period} </p></div>
+            <div className="test"><p style={{display: "inline"}}>{projList[selected].tools.map((i) => i + " ") } </p> </div>
             <div className="test"><p className="project-header">Purpose/Description </p><p style={{display: "inline"}}>{projList[selected].purpose} </p> </div>
             <div className="test"><p className="project-header">Motive </p><p style={{display: "inline"}}>{projList[selected].motive}</p></div>
 
             
             <div className="test">
                 <p className="project-header">Screenshots </p> 
-                {projList[selected].screenshots.length == 0 ? null : <ImageSlide value={projList[selected].screenshots} /> }
-               
+                {projList[selected].screenshots.length === 0 ? null : <ImageSlide value={projList[selected].screenshots} /> }
             </div>
-            <div className="test"><p className="project-header">Github </p> {projList[selected].github} </div>
+            <div className="test">
+                <p className="project-header">Github </p> 
+                {projList[selected].github === "" ? <h1>haha</h1> : <a href={projList[selected].github} ><p style={{display:"inline", fontSize: "1.3em", }}>Click Here!</p></a> }
+            </div>
             <div className="test"> 
                 <p className="project-header">Future Plan: </p> 
                 <p style={{margin: 0}}>{projList[selected].futuregoal} </p> 

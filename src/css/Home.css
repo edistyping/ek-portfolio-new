@@ -2,7 +2,7 @@
     display: flex;
     height: 80%;
     width: 80%;
-    margin: 3% auto;
+    margin: 1% auto 0 auto;
 }
 
 .left {
@@ -10,6 +10,8 @@
     height: auto;
     display: flex;
     flex-direction: column;
+
+
 }
 .left p {
     color: white;
@@ -18,7 +20,7 @@
     margin: 10% auto;
 }
 .left img {
-    height: 60%;
+    height: 70%;
     width: 85%;
     margin: 0 auto;
     border-radius: 20px;
@@ -76,12 +78,12 @@
 
 .right-intro-p {
     font-size: 1.2em;
-    margin: 0 0 8% 5%;
+    margin: 0 0 3% 5%;
 }
 
 .right-skills {
     color:white;
-    margin: 5% 0 0 0;
+    margin: 5% 0;
 
 }
 

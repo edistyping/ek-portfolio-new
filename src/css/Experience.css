@@ -1,11 +1,11 @@
 .main-experience {
-    width: 50%;
-    margin: 1% auto 2% auto;
     color: white;
-
+    width: 100%;
+    
     display: flex;
     flex-direction: row;
 
+    margin-bottom: 3%;
 }
 
 .jobicon {
@@ -17,6 +17,8 @@
 .experience-left {
     display: flex;
     flex-direction: column;
+    border-bottom: 2px solid;
+    
 }
 
 .experience-left-bottom {
@@ -24,21 +26,18 @@
     width: 100%;
     margin: 0;
     padding: 0;
-
     background: linear-gradient(white, white) no-repeat center/2px 100%;
 }
 
 .test {
-    width: 50%;
+    width: 100%;
     margin: 0 0 0 50%;
     padding: 0;
-    border-bottom: 2px solid white;
 }
 
 .experience-right {
     padding: 1% 2%;
-    border-bottom-style: solid;
-     
+    border-bottom: 2px solid white;
 }
 
 .experience-right-bottom {

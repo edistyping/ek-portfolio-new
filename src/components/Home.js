@@ -92,7 +92,7 @@ const RightSide = () => {
 
 
 const Home = () => (    
-    <div style={{borderColor: "silver", height: "100%"}}>
+    <div style={{borderColor: "silver", height: "100%", }}>
         <div className="main">
             <div className="left">
                 <p>Hello World from Aquarium!</p>
@@ -101,6 +101,16 @@ const Home = () => (
 
             <div className="right">
                 <RightSide/>
+            </div>
+        </div>
+
+        <div style={{width: "100%", backgroundColor: "yellowgreen", }}>
+            <h1 style={{textAlign: "center"}}>This will be Instagram Section</h1>
+
+            <div style={{display: "flex", justifyContent: "space-evenly", }}>                
+                <img src="" style={{width: "100px", height: "100px", }} alt="picture here" />
+                <img src="" style={{width: "100px", height: "100px", }} alt="picture here" />
+                <img src="" style={{width: "100px", height: "100px", }} alt="picture here" />
             </div>
         </div>
     </div>

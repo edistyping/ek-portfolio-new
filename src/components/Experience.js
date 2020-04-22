@@ -11,8 +11,8 @@ const Experience = () => {
         start_date: "Sep 2018",
         end_date: "Sep 2019",
         description: [
-            "As a Business System Analyst, my responsibilites are to design, development, and automation of BusinessObjects reports. Additional tasks included testing, documentation, and maintaineous.",
-            "Using SQLServers and ETL tools, assist with users with any troubling issues.",
+            "My main responsibility is to communicate with members to gather requirements to design and create reports as well as working with ETL team to ensure the accuracy of data or troubleshoot any issues with data or reports.",
+            "Additionally, using source applications, SQLServers, and BO reports, I provided assistance to users for any technical or business concerns.",
         ],
         skills: [
             "SQL",
@@ -30,8 +30,8 @@ const Experience = () => {
         start_date: "Jan 2018",
         end_date: "July 2018",
         description: [
-            "CGI is a ....",
-            "",
+            "Worked at one of Los Angeles County offices to analyze or develop reports requirements, ETL, and data mining using SQL Developer",            
+            "Secondary responsilbities include unit-testing or troubleshooting any issues in regards to  automations or report developments.",
         ],
         skills: [
             "SQL Server",
@@ -47,8 +47,9 @@ const Experience = () => {
         start_date: "Oct 2017",
         end_date: "Jan 2018",
         description: [
-            "As a Store Analyst for the retail headquarter, my responsibilities are preparing daily and weekly reports by extracting data directly from SQL Developer with Microsoft Office.",
-            "Primary responsibility includes analyzing sales and profits, and transfer inventories across 30 stores in goals to increase the numbers.",
+            "My first job after graduating from university!",
+            "As a Store Analyst at the headquarter of a retail company with 30-plus stores across Los Angeles", 
+            "I provided daily and weekly analtical reports, and using these reports supplemented with any additional data and sales team to transfer inventories across stores to increase sales and profits.",
         ],
         skills: [
             "Python", 
@@ -62,18 +63,19 @@ const Experience = () => {
     const jobList = [job0, job1, job2];
 
     return (
-        <div style={{height: "auto", backgroundColor: "#202020", }}>
+        <div style={{width: "100%", height: "auto", backgroundColor: "#202020",  }}>
+
+                <div style={{width: "60%", margin: "0 auto 3% auto", backgroundColor: "lightcoral" }}>
+
                         {jobList.map((i) =>
                             <div className="main-experience">
                                 <div className="experience-left"> 
                                     <div>
                                         <img className="jobicon" src={"./images/job_icon.png"} alt="Logo" />
                                     </div>
-                                    <div className="experience-left-bottom">
 
-                                    </div>
-    
-                                    <hr className="test"/>
+                                    <div className="experience-left-bottom" />
+                                    {/*<hr className="test"/>*/}
 
                                 </div>
 
@@ -107,7 +109,7 @@ const Experience = () => {
 
                         )}
                     
-
+            </div>
 
         </div>
     )
