@@ -10,9 +10,9 @@ const Popup = (props) => {
         projName: "Plan One",
         period: "Spring 2017",
         platform: "Android",
-        purpose: "The purpose/functionality of Plan One is to provide safety",
+        purpose: "Plan One is a mobile app for Android that's focused on promoting and imporiving outdoor safty experience by saving a user's traveling route while conserving battery. ",
         motive: [
-            "Increasing access to phone, yet same amount of people getting lost and other possibly avoidable troubles.",
+            "Despite increasing numbers of people with access to a smartphone, an extensive research showed still numbers of unfortunate incidents from outdoor activity hadn't been much affected.",
         ],
         tools: [
             "Java",
@@ -31,14 +31,17 @@ const Popup = (props) => {
         id: 2,
         projName: "InventStory",
         period: "Spring 2016",
-        purpose: "The purpose/functionality of InventStory is to provide a hand to start-up business",
+        purpose: "InventStory is intended and designed to provide supports to Start-up buisnesses to efficiently utilize their managment, inventory, and communication.",
         motive: [
-            "My experience from TJ Maxx and KBBQ came in handy for designing",
+            "For my 1st participation to Mobile App Challenge (MAC), I worked with 2 engineers from UCM to design this applicatino. ",
+            "With my previous experience working from TJ Maxx and a resturant, the team collaborated to design this application in hopes that each of ourselves can use it in the future!",
         ],
         tools: [
             "Java",
             "Android",
             "Project Management",
+            "Agile",
+            "MS Office",
         ],
         github: "https://github.com/goosfraba814/Invent_Story_MAC_S2016-First-Draft-",
         futuregoal: "Planning on re-coding this Mobile App from scratch in Kotlin!",
@@ -51,15 +54,17 @@ const Popup = (props) => {
         id: 3,
         projName: "Flying Ninja",
         period: "Spring 2017",
-        purpose: "This is a game created",
+        purpose: "This is a 2-D game I created for one of my university course in C++. As a popular game 'FlappyBird' disppeared from Google Store, I decided to re-create it to cherish the memory",
         motive: [
-            "My experience from ",
+            "I and another programmer from my course worked on the class together. This is also the first time I collaborated after learning the very concept of 'pair-programming",
+            "",
         ],
         tools: [
             "Window Application",
             "OpenGL",
             "Project Management",
             "2-D Game",
+            "Pair Programming",
         ],
         github: "https://github.com/goosfraba814/Flying-Ninja",
         futuregoal: "Re-creating this game as Web app instead and accessable via here (portfolio)",
@@ -72,9 +77,12 @@ const Popup = (props) => {
         id: 4,
         projName: "Project Protect",
         period: "Fall 2015",
-        purpose: "An App created to provide medical information and communication between patient and doctors in Merced Community",
+        purpose: ["Project Protect is an engineering service team in UC Merced that worked with our partner Healthy House to provde various medical services to people in needs around Merced County.",
+            "As a team, we designed a mobile app that provide health-related infos and communication supports between patient and doctors to ultimately reduce anti-bacterial resistance disease.",
+        ],
         motive: [
-            "My experience from TJ Maxx and KBBQ came in handy for designing",
+            "After having a chacne to directly speak to medical professionals and patients, we understood that there's a significant gap in communication leading to more fatal consquences.",
+            "It's also my first engineering team I've worked with since transferring from a community college.",
         ],
         tools: [
             "Java",
@@ -91,24 +99,30 @@ const Popup = (props) => {
 
     return (
         //Honetsly i think we can remvoe project-header stuff and only provide data/info
-        <div style={{display: "flex", flexDirection:"column"}}>
-            <div className="test"><p style={{display: "inline", fontSize: "1.5em"}}>{projList[selected].projName} </p> </div>
-            <div className="test"><p style={{display: "inline"}}>{projList[selected].period} </p></div>
-            <div className="test"><p style={{display: "inline"}}>{projList[selected].tools.map((i) => i + " ") } </p> </div>
+        <div style={{display: "flex", flexDirection:"column", backgroundColor: "white",  }}>
+            <div className="test" style={{}}><p style={{display: "inline", fontSize: "2em"}}>{projList[selected].projName} </p> <p style={{display: "inline", fontSize: "1.2em"}}> {projList[selected].period} </p> </div>
+            <div className="test"><p style={{display: "inline", }}>{projList[selected].tools.map((i) => <p style={{display: "inline", marginRight: "2em"}}>{i}</p> ) } </p> </div>
             <div className="test"><p className="project-header">Purpose/Description </p><p style={{display: "inline"}}>{projList[selected].purpose} </p> </div>
-            <div className="test"><p className="project-header">Motive </p><p style={{display: "inline"}}>{projList[selected].motive}</p></div>
-
+            <div className="test"><p className="project-header">Motive </p><p style={{display: "inline", }}>{projList[selected].motive}</p></div>
+            <div className="test" style={{marginBottom: "1vh"}}>
+                {projList[selected].screenshots.length === 0 ? null : 
+                    <div>
+                        <p className="project-header">Screenshots </p>
+                        <ImageSlide value={projList[selected].screenshots} /> 
+                    </div>
+                }                     
+            </div>
+            <div className="test" style={{marginBottom: "1vh"}}>
+                {projList[selected].github === "" ? null :     
+                    <div>
+                        <p className="project-header">Github </p> 
+                        <a href={projList[selected].github} ><p style={{display:"inline", fontSize: "1.3em", }}>Click Here!</p></a> 
+                    </div>
+                }
+            </div>
             
-            <div className="test">
-                <p className="project-header">Screenshots </p> 
-                {projList[selected].screenshots.length === 0 ? null : <ImageSlide value={projList[selected].screenshots} /> }
-            </div>
-            <div className="test">
-                <p className="project-header">Github </p> 
-                {projList[selected].github === "" ? <h1>haha</h1> : <a href={projList[selected].github} ><p style={{display:"inline", fontSize: "1.3em", }}>Click Here!</p></a> }
-            </div>
-            <div className="test"> 
-                <p className="project-header">Future Plan: </p> 
+            <div className="test" > 
+                <p className="project-header">Future Plan </p> 
                 <p style={{margin: 0}}>{projList[selected].futuregoal} </p> 
             </div>
         </div>      
@@ -146,7 +160,6 @@ const Projects = () => {
                 <div className="projects-element" onClick={() => setShow(3)}>
                     <h2>Flying Pigeon</h2>
                     <p>Spring 2017</p>
-                    <p>(Build one using ReactJS and host it; future)</p>
                     <p>Window App | Simple 2-D Game | OpenGL++</p>
                 </div>
                 <div className="projects-element" onClick={() => setShow(4)}>
