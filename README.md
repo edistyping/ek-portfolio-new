@@ -16,13 +16,10 @@
 
 -------------------------------------------------------------
 
-Plan One: 
-    platform: Android Mobile App
-    Programming lanauge and tools: Java, Google Map API
-    purpose: To provide additional safety 
-    motive: People getting lost and usage of capabilitiy (not feature) of smartphones. 
+1. need to change header underlined thing
+2. In Project, if Popup is longer than 80vh, it's cut out so can't click Button 
 
-    future plan: Re-wrtie it in Kotlin 
+3. Arrow buttons for changing pictures
 
 
 

@@ -92,7 +92,7 @@ const RightSide = () => {
 
 
 const Home = () => (    
-    <div style={{borderColor: "silver", height: "100%", }}>
+    <div style={{borderColor: "silver", height: "90vh", }}>
         <div className="main">
             <div className="left">
                 <p>Hello World from Aquarium!</p>
@@ -104,7 +104,7 @@ const Home = () => (
             </div>
         </div>
 
-        <div style={{width: "100%", backgroundColor: "yellowgreen", }}>
+        <div style={{height: "auto", width: "100%", backgroundColor: "yellowgreen", margin: "0", }}>
             <h1 style={{textAlign: "center"}}>This will be Instagram Section</h1>
 
             <div style={{display: "flex", justifyContent: "space-evenly", }}>                

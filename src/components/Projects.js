@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 import ImageSlide from './ImageSlide';
 import '../css/Projects.css'
@@ -98,13 +98,19 @@ const Popup = (props) => {
     const selected = props.show - 1;
 
     return (
+
         //Honetsly i think we can remvoe project-header stuff and only provide data/info
-        <div style={{display: "flex", flexDirection:"column", backgroundColor: "white",  }}>
-            <div className="test" style={{}}><p style={{display: "inline", fontSize: "2em"}}>{projList[selected].projName} </p> <p style={{display: "inline", fontSize: "1.2em"}}> {projList[selected].period} </p> </div>
-            <div className="test"><p style={{display: "inline", }}>{projList[selected].tools.map((i) => <p style={{display: "inline", marginRight: "2em"}}>{i}</p> ) } </p> </div>
-            <div className="test"><p className="project-header">Purpose/Description </p><p style={{display: "inline"}}>{projList[selected].purpose} </p> </div>
+        <div style={{padding: "0 1vh", display: "flex", flexDirection:"column", backgroundColor: "white", "font-family": "'Indie Flower', cursive" }}>
+            <div className="test" style={{}}><p style={{display: "inline", fontSize: "2em"}}>{projList[selected].projName} </p> <p style={{display: "inline", fontSize: "1.2em"}}> {projList[selected].period} |   [git_icon] </p> </div>
+            
+            <div className="test" style={{display: "flex", justifyContent: "center", }}>
+                {projList[selected].tools.map((i) => 
+                    <p style={{display: "inline", margin: "0 3vh 0 0"}}>{i}</p> )}
+             </div>
+                        
+            <div className="test"><p className="project-header">Description </p><p style={{display: "inline"}}>{projList[selected].purpose} </p> </div>
             <div className="test"><p className="project-header">Motive </p><p style={{display: "inline", }}>{projList[selected].motive}</p></div>
-            <div className="test" style={{marginBottom: "1vh"}}>
+            <div className="test" style={{ }}>
                 {projList[selected].screenshots.length === 0 ? null : 
                     <div>
                         <p className="project-header">Screenshots </p>
@@ -112,7 +118,7 @@ const Popup = (props) => {
                     </div>
                 }                     
             </div>
-            <div className="test" style={{marginBottom: "1vh"}}>
+            <div className="test" style={{marginBottom: "1vh", }}>
                 {projList[selected].github === "" ? null :     
                     <div>
                         <p className="project-header">Github </p> 
@@ -125,13 +131,15 @@ const Popup = (props) => {
                 <p className="project-header">Future Plan </p> 
                 <p style={{margin: 0}}>{projList[selected].futuregoal} </p> 
             </div>
-        </div>      
+
+        </div>     
+         
     );
 };
 
 const Projects = () => {
 
-    const [show, setShow] = useState(3);
+    const [show, setShow] = useState(4);
 
     var popupClass = "diplay-none";
     if (show !== 0){
@@ -139,11 +147,14 @@ const Projects = () => {
     }    
 
     return (    
-        <div style={{width:"100%", height: "80vh",backgroundColor:"grey", display:"flex", }}>
+        <div style={{width:"100%", minHeight: "90vh", height: "fit-content",backgroundColor:"lightblue", margin: 0, padding: 0, overflow: "auto" }}>
             
             <div className={popupClass} >
-                {show === 0 ? null : <Popup show={show}/> }
-                <button onClick={() => setShow(0)} >Hi Button </button>
+                <div style={{display: "flex", flexDirection: "column", margin: "0" }}>                
+                    {show === 0 ? null : 
+                        <Popup show={show}/> }
+                        <div style={{margin: "0 auto 3% auto", }}><button style={{fontWeight: "bold", fontSize: "1.2em"}} onClick={() => setShow(0)} > Close </button></div>
+                </div>
             </div>
 
             <div className="projects-container"> 

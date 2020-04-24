@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../css/Projects.css'
 
 const ImageSlide = (props) => {
 
@@ -22,13 +23,13 @@ const ImageSlide = (props) => {
   
     return (
 
-        <div style={{ display: "flex", flexDirection: "column", width: "100%", height: "auto", backgroundColor: "yellow", }} >
+        <div style={{ display: "flex", flexDirection: "column", width: "100%", height: "auto", }} >
             <img src={imgArr[index]} style={{width: "40%", height: "35vh", margin: "10px auto", borderStyle: "solid", borderWidth: "5px", }} alt="project images" />
             <p style={{margin: "auto", fontSize: "1.3em"}}> {index+1} / {imgArr.length}</p>
         
-            <div style={{display: "flex", justifyContent: "center", height: "100%", backgroundColor: "blue"}}>
-                <button style={{width: "150px", height: "40px",  }} onClick={() => setIndex(ControlLimit(index,imgArr.length-1, -1))} >  Left </button>
-                <button style={{width: "150px", height: "40px",  }} onClick={() => setIndex(ControlLimit(index,imgArr.length-1, +1))} > Right </button>
+            <div style={{display: "flex", justifyContent: "center", height: "100%", marginBottom: "2vh" }}>
+                <button className="testButton" style={{}} onClick={() => setIndex(ControlLimit(index,imgArr.length-1, -1))} > Left </button>
+                <button className="testButton" style={{marginLeft: "2vh"}} onClick={() => setIndex(ControlLimit(index,imgArr.length-1, +1))} > Right </button>
             </div>
         </div>
     );

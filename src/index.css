@@ -7,9 +7,14 @@ body {
   
   margin: 0;
   padding: 0;
+
+  height: 100%
+
 }
 
-
+html, #app, #app>div {
+  height: 100%
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

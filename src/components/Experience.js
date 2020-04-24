@@ -65,7 +65,7 @@ const Experience = () => {
     const jobList = [job0, job1, job2];
 
     return (
-        <div style={{width: "100%", height: "auto", backgroundColor: "#202020",  }}>
+        <div style={{width: "100%", height: "fit-content", backgroundColor: "#202020", }}>
 
                 <div style={{width: "55%", margin: "0 auto 3% auto",  }}>
                         {jobList.map((i) =>

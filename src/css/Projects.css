@@ -1,54 +1,54 @@
-.projects-container {
-    
+.projects-container {    
+    height: fit-content;
     width: 80%;
-    margin: auto;
     
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-gap: 5%;
+    margin: 5% auto;
 
-    
+
+    display: grid;
+    grid-template-columns: 40% 40%;
+
+    grid-gap: 15% 5%;
+
+
+    justify-content: center;
+
 }
 
 .projects-element {
-    height: auto;
+    height: fit-content;
     width: 100%;
-
+    
     text-align: center;
-
     font-size: 1.5em;    
     color: black;
     background-color: white;
-
     border-style: solid;
     cursor: pointer;
 }
 
 .project-popup {
-    position: fixed;
-    left: 50%;
+    position: absolute;
+    
+    margin: 1% 0 1% 0;
 
     width: 40%;
     height: fit-content;
-
+    
+    left: 50%;
     transform: translate(-50%, 0);
-    background-color: grey;
+    background-color: white;
     border-style: solid;
 }
 
 .diplay-none {
     display: none;
-    position: fixed;
-    left: 50%;
-    transform: translate(-50%, 0);
-    top: 20%;
-    background-color: aqua;
 }
 
 .project-header {
     font-size: 1.5em;    
-    padding: 0 1vh 0 0;
-    margin: 0;
+    margin: 0 0 1vh 0;
+    font-weight: bold;
 }
 
 .test {
@@ -57,4 +57,21 @@
     width: 100%;
     margin: 0 0 1.5vh 0;
     padding: 0;
+}
+
+.testButton{
+    box-shadow:inset 0px 1px 3px 0px #91b8b3;
+	background:linear-gradient(to bottom, #768d87 5%, #6c7c7c 100%);
+	background-color:#768d87;
+	border-radius:5px;
+	border:1px solid #566963;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:11px 23px;
+	text-decoration:none;
+	text-shadow:0px -1px 0px #2b665e;
 }

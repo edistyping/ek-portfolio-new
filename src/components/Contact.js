@@ -6,7 +6,7 @@ const Contact = () => {
 
 
     return (    
-        <div style={{borderColor: "silver", height: "100%"}}>
+        <div style={{borderColor: "silver", minHeight: "85vh"}}>
             <div className="main-contact">
                 <div className="contact-left">
                     <p>Contact Me</p>

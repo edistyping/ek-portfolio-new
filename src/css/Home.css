@@ -1,8 +1,9 @@
 .main {
     display: flex;
-    height: 80%;
+    height: fit-content;
     width: 80%;
-    margin: 1% auto 0 auto;
+    margin: 1% auto 5% auto;
+    
 }
 
 .left {
@@ -20,8 +21,8 @@
     margin: 10% auto;
 }
 .left img {
-    height: 70%;
-    width: 85%;
+    height: 60%;
+    width: 75%;
     margin: 0 auto;
     border-radius: 20px;
     border-style: solid;
