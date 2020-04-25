@@ -1,10 +1,13 @@
 .main-contact {
     width: 70%;
-    height: 70%;
+    height: fit-content;
     margin: 5% auto;
 
+    
     display: flex;
     flex-direction: row;
+
+    
 }
 
 .contact-left {
@@ -21,21 +24,29 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-
     color: white;
-    background-color: green;
+    
+}
+
+.contact-right form{
+    
+    margin: auto;
+    width: 90%;
 
 }
+
 
 .contact-right p{
     font-size: 2em;
-    margin: 0 0 0 5%;
+    padding: 0;
+    margin: auto;
 
 }
 
-.contact-right input{
+.contact-right textarea{
     font-size: 1.5em;
-    margin: 0 0 0 5%;
-
-    text-align: justify;
+    text-align: left;
+    margin-bottom: 5%;
+    width: 80%;
+    height: 1.5em;
 }
