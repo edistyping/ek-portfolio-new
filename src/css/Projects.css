@@ -10,8 +10,8 @@
 
     grid-gap: 15% 5%;
 
-
     justify-content: center;
+
 
 }
 
@@ -37,8 +37,11 @@
     
     left: 50%;
     transform: translate(-50%, 0);
-    background-color: white;
     border-style: solid;
+
+    color: white;
+    background-color: darkslategrey;
+    border-radius: 20px;
 }
 
 .diplay-none {
@@ -52,7 +55,7 @@
 }
 
 .test {
-    background-color: white;
+
     text-align: left;
     width: 100%;
     margin: 0 0 1.5vh 0;
@@ -71,7 +74,16 @@
 	font-family:Arial;
 	font-size:15px;
 	font-weight:bold;
-	padding:11px 23px;
+	padding: 7px 15px;
 	text-decoration:none;
-	text-shadow:0px -1px 0px #2b665e;
+    text-shadow:0px -1px 0px #2b665e;
+    
+}
+
+.testButton2{
+    font-weight: bold;
+    font-size: 1.2em;
+	background-color:white;
+	border-radius:5px;
+	border:1px solid #566963;
 }

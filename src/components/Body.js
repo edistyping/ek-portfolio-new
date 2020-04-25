@@ -12,14 +12,12 @@ const Body = () => {
 
     return (
         <div className="Body"> 
-
             <Switch>
                 <Route exact path="/" component={Home} />
                 <Route path="/experience" component={Experience} />
                 <Route path="/projects" component={Projects} />
                 <Route path="/contact" component={Contact} />
             </Switch>
-
         </div>
     )
 }

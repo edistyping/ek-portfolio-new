@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 
 import ImageSlide from './ImageSlide';
 import '../css/Projects.css'
@@ -10,7 +10,8 @@ const Popup = (props) => {
         projName: "Plan One",
         period: "Spring 2017",
         platform: "Android",
-        purpose: "Plan One is a mobile app for Android that's focused on promoting and imporiving outdoor safty experience by saving a user's traveling route while conserving battery. ",
+        purpose: ["Plan One is a mobile app for Android that's focused on promoting and imporiving outdoor safty experience by saving a user's traveling route while conserving battery. ",
+        ],
         motive: [
             "Despite increasing numbers of people with access to a smartphone, an extensive research showed still numbers of unfortunate incidents from outdoor activity hadn't been much affected.",
         ],
@@ -31,7 +32,8 @@ const Popup = (props) => {
         id: 2,
         projName: "InventStory",
         period: "Spring 2016",
-        purpose: "InventStory is intended and designed to provide supports to Start-up buisnesses to efficiently utilize their managment, inventory, and communication.",
+        purpose: ["InventStory is intended and designed to provide supports to Start-up buisnesses to efficiently utilize their managment, inventory, and communication.",
+        ],
         motive: [
             "For my 1st participation to Mobile App Challenge (MAC), I worked with 2 engineers from UCM to design this applicatino. ",
             "With my previous experience working from TJ Maxx and a resturant, the team collaborated to design this application in hopes that each of ourselves can use it in the future!",
@@ -54,7 +56,8 @@ const Popup = (props) => {
         id: 3,
         projName: "Flying Ninja",
         period: "Spring 2017",
-        purpose: "This is a 2-D game I created for one of my university course in C++. As a popular game 'FlappyBird' disppeared from Google Store, I decided to re-create it to cherish the memory",
+        purpose: ["This is a 2-D game I created for one of my university course in C++. As a popular game 'FlappyBird' disppeared from Google Store, I decided to re-create it to cherish the memory",
+        ],
         motive: [
             "I and another programmer from my course worked on the class together. This is also the first time I collaborated after learning the very concept of 'pair-programming",
             "",
@@ -77,7 +80,8 @@ const Popup = (props) => {
         id: 4,
         projName: "Project Protect",
         period: "Fall 2015",
-        purpose: ["Project Protect is an engineering service team in UC Merced that worked with our partner Healthy House to provde various medical services to people in needs around Merced County.",
+        purpose: [
+            "Project Protect is an engineering service team in UC Merced that worked with our partner Healthy House to provde various medical services to people in needs around Merced County.",
             "As a team, we designed a mobile app that provide health-related infos and communication supports between patient and doctors to ultimately reduce anti-bacterial resistance disease.",
         ],
         motive: [
@@ -100,7 +104,7 @@ const Popup = (props) => {
     return (
 
         //Honetsly i think we can remvoe project-header stuff and only provide data/info
-        <div style={{padding: "0 1vh", display: "flex", flexDirection:"column", backgroundColor: "white", "font-family": "'Indie Flower', cursive" }}>
+        <div style={{padding: "1vh 2vh", display: "flex", flexDirection:"column", "font-family": "'Indie Flower', cursive" }}>
             <div className="test" style={{}}><p style={{display: "inline", fontSize: "2em"}}>{projList[selected].projName} </p> <p style={{display: "inline", fontSize: "1.2em"}}> {projList[selected].period} |   [git_icon] </p> </div>
             
             <div className="test" style={{display: "flex", justifyContent: "center", }}>
@@ -108,7 +112,12 @@ const Popup = (props) => {
                     <p style={{display: "inline", margin: "0 3vh 0 0"}}>{i}</p> )}
              </div>
                         
-            <div className="test"><p className="project-header">Description </p><p style={{display: "inline"}}>{projList[selected].purpose} </p> </div>
+            <div className="test"><p className="project-header">Description </p></div>
+            <div className="test" >
+                {projList[selected].purpose.map((i) => 
+                    <p style={{display: "inline-block", margin: "0 3vh 0 0"}}>{i}</p> )}
+             </div>
+            
             <div className="test"><p className="project-header">Motive </p><p style={{display: "inline", }}>{projList[selected].motive}</p></div>
             <div className="test" style={{ }}>
                 {projList[selected].screenshots.length === 0 ? null : 
@@ -147,13 +156,13 @@ const Projects = () => {
     }    
 
     return (    
-        <div style={{width:"100%", minHeight: "90vh", height: "fit-content",backgroundColor:"lightblue", margin: 0, padding: 0, overflow: "auto" }}>
+        <div style={{width:"100%", minHeight: "90vh", height: "110vh", backgroundColor:"darkslategrey", margin: 0, padding: 0, overflow: "auto" }}>
             
             <div className={popupClass} >
                 <div style={{display: "flex", flexDirection: "column", margin: "0" }}>                
                     {show === 0 ? null : 
                         <Popup show={show}/> }
-                        <div style={{margin: "0 auto 3% auto", }}><button style={{fontWeight: "bold", fontSize: "1.2em"}} onClick={() => setShow(0)} > Close </button></div>
+                        <div style={{margin: "0 auto 3% auto", }}><button className="testButton2" onClick={() => setShow(0)} > Close </button></div>
                 </div>
             </div>
 
