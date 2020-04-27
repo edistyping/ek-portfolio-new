@@ -3,6 +3,14 @@ import React, { useState } from 'react';
 import ImageSlide from './ImageSlide';
 import '../css/Projects.css'
 
+import invpic1 from '../images/invent1.jpg';
+import invpic2 from '../images/invent2.jpg';
+import invpic3 from '../images/invent3.jpg';
+import invpic4 from '../images/invent4.jpg';
+import loopypic1 from '../images/loopy1.jpg';
+import loopypic2 from '../images/loopy2.jpg';
+
+
 const Popup = (props) => {
     
     var proj_planone = {
@@ -47,10 +55,10 @@ const Popup = (props) => {
         ],
         github: "https://github.com/goosfraba814/Invent_Story_MAC_S2016-First-Draft-",
         futuregoal: "Planning on re-coding this Mobile App from scratch in Kotlin!",
-        screenshots: ["/images/invent1.jpg",
-                    "/images/invent2.jpg",
-                    "/images/invent3.jpg",
-                    "/images/invent4.jpg"],
+        screenshots: [{invpic1},
+                    {invpic2},
+                    {invpic3},
+                    {invpic4}],
     };
     var proj_flying = {
         id: 3,

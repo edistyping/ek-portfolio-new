@@ -1,6 +1,7 @@
 import React from 'react';
 
 import '../css/Experience.css'
+import JobIcon from '../images/job_icon.png';
 
 const Experience = () => {    
     
@@ -72,7 +73,7 @@ const Experience = () => {
                             <div className="main-experience">
                                 <div className="experience-left"> 
                                     <div>
-                                        <img className="jobicon" src={"./images/job_icon.png"} alt="Logo" />
+                                        <img className="jobicon" src={JobIcon} alt="Logo" />
                                     </div>
 
                                     <div style={{display: "flex", width: "100%", height: "100%"}}>

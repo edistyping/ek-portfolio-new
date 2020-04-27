@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../App.css';
 
+import ResumeIcon from '../images/resume_icon.png';
+
+
 function TimeDisplay(){
   const [counter, setCounter] = useState(new Date().toLocaleString());
   useEffect(() => {
@@ -27,7 +30,7 @@ function SocialNetworks(){
           <div className="social-style">
                 <a href='https://github.com/Goosefraba814/ek-portfolio'><img src='https://img.icons8.com/bubbles/2x/github.png' alt="Github Icon"/></a>
                 <a href='https://www.linkedin.com/in/edward-kim-a77608106/'><img src='https://pngimg.com/uploads/linkedIn/linkedIn_PNG38.png' alt="Linkedin Icon"/></a>
-                <a href='/images/Resume_Edward_Kim.pdf' download><img src='../images/Resume_Icon.png' alt="Resume Download Icon"/></a>
+                <a href='/images/resume_edward_kim.pdf' download><img src={ResumeIcon} alt="Resume Download Icon"/></a>
           </div>
   )
 }

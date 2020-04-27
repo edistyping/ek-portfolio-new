@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 
-import '../css/Home.css'
+import '../css/Home.css';
+
+import picture0 from '../images/ek_aquarium.jpg';
 
 const Intro = () => {
         var Skills = [
@@ -96,7 +98,7 @@ const Home = () => (
         <div className="main">
             <div className="left">
                 <p>Hello World from Aquarium!</p>
-                <img src="/images/EK_Aquarium.jpg" alt="This is my face" />           
+                <img src={picture0} alt="This is my face" />           
             </div>
 
             <div className="right">
