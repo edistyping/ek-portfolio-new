@@ -148,7 +148,7 @@ const Popup = (props) => {
 
 const Projects = () => {
 
-    const [show, setShow] = useState(4);
+    const [show, setShow] = useState(0);
 
     var popupClass = "diplay-none";
     if (show !== 0){
@@ -156,7 +156,7 @@ const Projects = () => {
     }    
 
     return (    
-        <div style={{width:"100%", minHeight: "90vh", height: "110vh", backgroundColor:"darkslategrey", margin: 0, padding: 0, overflow: "auto" }}>
+        <div style={{width:"100%", minHeight: "90vh", height: "fit-content", backgroundColor:"darkslategrey", margin: 0, padding: 0, overflow: "auto" }}>
             
             <div className={popupClass} >
                 <div style={{display: "flex", flexDirection: "column", margin: "0" }}>                

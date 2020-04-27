@@ -16,12 +16,10 @@
 
 -------------------------------------------------------------
 
-1. need to change header underlined thing
-2. In Project, if Popup is longer than 80vh, it's cut out so can't click Button 
+1. Implement Instagram import
+2. Project: If Popup is longer than 80vh, it's cut out so can't click Button 
+3. Contact: Set up sending the email. (Fix the Send button too)
+5. Deploy the page to the github
 
-3. Arrow buttons for changing pictures
-
-
-
-
+- Flappybird replica for JS will be using Redux if React is used
 
