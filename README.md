@@ -1,7 +1,7 @@
 ---
 permalink: /index.html
 ---
-
+https://goosfraba814.github.io/ek-portfolio-new/
 - Finish Experience
     - Descriptions
 
