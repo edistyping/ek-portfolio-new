@@ -1,4 +1,6 @@
-# 4/6/2020
+---
+permalink: /index.html
+---
 
 - Finish Experience
     - Descriptions

@@ -32,7 +32,6 @@ class Contact extends React.Component {
         alert("Submit button was pressed!");
     }
 
-
     render() {
         return (    
             <div style={{backgroundColor: "darkslategrey", minHeight: "90vh", overflow: "auto"}}>
