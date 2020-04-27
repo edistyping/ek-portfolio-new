@@ -3,14 +3,6 @@ import React, { useState } from 'react';
 import ImageSlide from './ImageSlide';
 import '../css/Projects.css'
 
-import invpic1 from '../images/invent1.jpg';
-import invpic2 from '../images/invent2.jpg';
-import invpic3 from '../images/invent3.jpg';
-import invpic4 from '../images/invent4.jpg';
-import loopypic1 from '../images/loopy1.jpg';
-import loopypic2 from '../images/loopy2.jpg';
-
-
 const Popup = (props) => {
     
     var proj_planone = {
@@ -30,10 +22,7 @@ const Popup = (props) => {
         ],
         github: "",
         futuregoal: "Planning on re-coding this Mobile App from scratch in Kotlin!",
-        screenshots: ["/images/planone/1.png",
-                    "/images/planone/2.png",
-                    "/images/planone/3.png",
-                    "/images/planone/4.png"],
+        screenshots: [0, 1, 2, 3],
     };
 
     var proj_inventstory = {
@@ -55,10 +44,7 @@ const Popup = (props) => {
         ],
         github: "https://github.com/goosfraba814/Invent_Story_MAC_S2016-First-Draft-",
         futuregoal: "Planning on re-coding this Mobile App from scratch in Kotlin!",
-        screenshots: [{invpic1},
-                    {invpic2},
-                    {invpic3},
-                    {invpic4}],
+        screenshots: [4, 5, 6, 7],
     };
     var proj_flying = {
         id: 3,
@@ -79,9 +65,7 @@ const Popup = (props) => {
         ],
         github: "https://github.com/goosfraba814/Flying-Ninja",
         futuregoal: "Re-creating this game as Web app instead and accessable via here (portfolio)",
-        screenshots: ["/images/loopy_start.jpg",
-                     "/images/loopy_end.jpg", 
-        ]
+        screenshots: [8, 9]
     };
 
     var proj_projectprotect = {
