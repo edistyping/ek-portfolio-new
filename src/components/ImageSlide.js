@@ -38,6 +38,7 @@ const ImageSlide = (props) => {
   
     return (
         <div style={{ display: "flex", flexDirection: "column", width: "100%", height: "auto", }} >
+            <h3>{imgSubArr[index]}</h3>
             <img src={imgSubArr[index]} style={{width: "40%", height: "35vh", margin: "10px auto", borderStyle: "solid", borderWidth: "5px", }} alt="project images" />
             <p style={{margin: "auto", fontSize: "1.3em"}}> {index+1} / {pIndex.length}</p>
         
