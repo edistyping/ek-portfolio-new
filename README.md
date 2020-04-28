@@ -1,9 +1,13 @@
 ---
 permalink: /index.html
 ---
+<<<<<<< HEAD
 
 https://goosfraba814.github.io/ek-portfolio-new/
 
+=======
+https://goosfraba814.github.io/ek-portfolio-new/
+>>>>>>> f6aa75de70a99bb6559c5fa0d33f1b06462bd4b3
 - Finish Experience
     - Descriptions
 
